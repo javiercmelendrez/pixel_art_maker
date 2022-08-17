@@ -6,6 +6,10 @@
 const form = document.getElementById("sizePicker");
 form.addEventListener("submit", handleSubmit);
 
+/**
+  * @desc capture form submit event
+  * @param object $e - Form Object
+*/
 function handleSubmit(e) {
   e.preventDefault();
   const height = e.target.elements.inputHeight.value;
@@ -13,6 +17,11 @@ function handleSubmit(e) {
   makeGrid(height, width);
 }
 
+/**
+  * @desc create a table 
+  * @param int $width - number of cells
+  * @param int $height - number of rows of the table
+*/
 function makeGrid(height, width) {
   const table = document.getElementById("pixelCanvas");
   table.innerHTML = "";
